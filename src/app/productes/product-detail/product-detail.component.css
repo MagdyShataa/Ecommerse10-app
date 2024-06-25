@@ -1,0 +1,42 @@
+.product-detail-container {
+  /* Basic Styling */
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  /* Typography */
+  font-family: Arial, sans-serif;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Button Styling */
+  button {
+    margin-top: 20px;
+  }
+}
+
+/* Image Styling */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Layout (for smaller screens) */
+@media (max-width: 768px) {
+  .col-md-4 {
+    width: 100%;
+  }
+
+  .col-md-8 {
+    width: 100%;
+  }
+}

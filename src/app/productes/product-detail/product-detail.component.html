@@ -1,0 +1,49 @@
+<br>
+<br>
+<br>
+<br>
+<p class="text-end pe-5 mb-5 fw-medium fs-6 text-decoration-underline">
+  <button mat-fab extended>
+    <mat-icon>favorite</mat-icon>
+    productNumber: {{productNumber}}
+  </button>
+
+</p>
+<div class="container-xxl mt-4 pt-5 mx-auto">
+
+
+  <mat-card class="example-card mx-auto">
+    <div class="mb-3 mx-auto">
+      <div class="row g-0 mx-auto">
+        <div class="col-md-4" *ngIf="productDetail$ | async as product">
+          <img [src]="product.thumbnail" class="img-fluid object-fit-cover mx-auto text-center" [alt]="product.title">
+        </div>
+        <div class="col-md-8  border-0 ">
+          <div class="card-body mx-auto px-2 border-0 ">
+            <div class="product-detail-container border-0 shadow bg-dark" *ngIf="productDetail$ | async as product">
+              <h4 class="text-light">{{ product.title }}</h4>
+              <p class="text-light">{{ product.description }}</p>
+              <p class="fw-semibold text-white mb-0">Price: {{ product.price | currency }}</p>
+              <p class="fw-medium mb-0 text-danger">discount: {{ product.discountPercentage | currency }}</p>
+              <p class="fw-medium text-danger">stock: {{ product.stock }} unit</p>
+
+              <button mat-raised-button class="mx-2" color="warn" (click)="removeFromCart(product)">remove</button>
+              <button mat-raised-button color="warn" (click)="addToCart(product)">Add to Cart </button>
+              <br>
+              <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+            </div>
+
+            <div *ngIf="!(productDetail$ | async)">
+              <p>Loading product details...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </mat-card>
+</div>

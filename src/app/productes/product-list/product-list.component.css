@@ -1,0 +1,20 @@
+.example-card {
+  height:370px ;
+
+}
+
+
+
+.mat-spinner {
+  margin-left: 400px;
+  padding-left: 400px;
+}
+
+.mat-card {
+background-color: black;
+
+}
+
+.mat-card:hover {
+  transform: scale(1.05);
+}

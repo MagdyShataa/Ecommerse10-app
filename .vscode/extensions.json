@@ -1,4 +1,25 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    "angular.ng-template",
+    "ms-vscode.vscode-typescript-next",
+    "mikael.angular-beastcode",
+    "johnpapa.angular-essentials",
+    "johnpapa.angular2",
+    "syncfusioninc.angular-vscode-extensions",
+    "formulahendry.auto-close-tag",
+    "steoates.autoimport",
+    "moppitz.vscode-extension-auto-import",
+    "teabyii.ayu",
+    "anbuselvanrocky.bootstrap5-vscode",
+    "hossaini.bootstrap-intellisense",
+    "svipas.code-autocomplete",
+    "bierner.color-info",
+    "metatype.copilot-vscode",
+    "paulmolluzzo.convert-css-in-js",
+    "taodongwu.ejs-snippets",
+    "dbaeumer.vscode-eslint",
+    "zignd.html-css-class-completion",
+    "ritwickdey.liveserver"
+  ]
 }

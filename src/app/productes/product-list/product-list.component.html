@@ -1,0 +1,47 @@
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-xxl bg-black text-center mx-auto">
+  <h3 class="text-light text-center py-5 px-2 text-decoration-underline">Ecommerce</h3>
+
+  <div *ngIf="isLoading">
+    <div class="text-center mx-auto mt-5">
+      <div class="row text-center mx-auto">
+        <mat-spinner></mat-spinner>
+        <p class="text-light mt-3">Loading products...</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 pb-5 text-center mx-auto">
+    <div class="col " *ngFor="let product of productsList?.products">
+      <mat-card class="example-card  bg-dark border-0 shadow" appearance="outlined">
+        <img mat-card-image class="img-fluid bg-white" [src]="product.thumbnail" [title]="product.title+':details' "
+          [alt]="product.title" style="height: 220px;">
+        <mat-card-content>
+          <p class="card-title mt-1  text-center text-white mx-auto">{{ product.title }}</p>
+          <p class="card-title  text-warning  text-center mx-auto">Rating: {{ product.rating }}</p>
+          <button mat-raised-button [routerLink]="['/product-detail', product.id]" color="warn">View details</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="text-center">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+</ng-template>

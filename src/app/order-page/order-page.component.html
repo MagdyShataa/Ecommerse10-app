@@ -1,0 +1,33 @@
+<br>
+<br>
+
+<div class="text-center">
+  <img src="https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_1280.png" style="width: 200px;" class="img-fluid"
+    alt="image desc" />
+</div>
+
+<div class="mt-1 container-xxl px-5 border-0  text-center">
+  <div *ngIf="orderItems">
+    <h5>Order Details</h5>
+    <p>Name: {{ orderItems.name }}</p>
+    <!-- Display other order details here -->
+  </div>
+  <div *ngIf="!orderItems">
+    <p>No order details found.</p>
+  </div>
+  <section class="bg-primary-subtle shadow rounded-5">
+    <h4 class="text-success">order has placed successfully</h4>
+    <h6>
+      thank you for shopping with popular E-commerce
+    </h6>
+    <p style="color: rgb(237, 28, 109);text-decoration: underline; padding-left: 1px;padding-right: 1px;"> kindly pay
+      amount
+
+      during delivery</p>
+
+    <button mat-raised-button style="background-color: rgb(129, 188, 247);" class="py-3" color="primary"
+      (click)="goBack()">Back to list</button>
+
+  </section>
+
+</div>

@@ -1,0 +1,14 @@
+{
+  "database": {
+    "rules": "ecommmercs.json"
+  },
+  "emulators": {
+    "database": {
+      "port": 4200
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
